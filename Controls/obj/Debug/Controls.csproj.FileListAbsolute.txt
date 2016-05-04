@@ -1,0 +1,7 @@
+D:\VS2015\PiRadioUtils\Controls\bin\Debug\Controls.dll
+D:\VS2015\PiRadioUtils\Controls\bin\Debug\Controls.pdb
+D:\VS2015\PiRadioUtils\Controls\bin\Debug\Renci.SshNet.dll
+D:\VS2015\PiRadioUtils\Controls\bin\Debug\Renci.SshNet.xml
+D:\VS2015\PiRadioUtils\Controls\obj\Debug\Controls.csprojResolveAssemblyReference.cache
+D:\VS2015\PiRadioUtils\Controls\obj\Debug\Controls.dll
+D:\VS2015\PiRadioUtils\Controls\obj\Debug\Controls.pdb

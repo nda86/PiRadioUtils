@@ -1,0 +1,14 @@
+D:\VS2015\PiRadioUtils\PiRadioUtils\bin\Debug\PiRadioUtils.exe.config
+D:\VS2015\PiRadioUtils\PiRadioUtils\bin\Debug\PiRadioUtils.exe
+D:\VS2015\PiRadioUtils\PiRadioUtils\bin\Debug\PiRadioUtils.pdb
+D:\VS2015\PiRadioUtils\PiRadioUtils\obj\Debug\PiRadioUtils.csprojResolveAssemblyReference.cache
+D:\VS2015\PiRadioUtils\PiRadioUtils\obj\Debug\PiRadioUtils.ConnectSettingsForm.resources
+D:\VS2015\PiRadioUtils\PiRadioUtils\obj\Debug\PiRadioUtils.MainForm.resources
+D:\VS2015\PiRadioUtils\PiRadioUtils\obj\Debug\PiRadioUtils.Properties.Resources.resources
+D:\VS2015\PiRadioUtils\PiRadioUtils\obj\Debug\PiRadioUtils.csproj.GenerateResource.Cache
+D:\VS2015\PiRadioUtils\PiRadioUtils\obj\Debug\PiRadioUtils.exe
+D:\VS2015\PiRadioUtils\PiRadioUtils\obj\Debug\PiRadioUtils.pdb
+D:\VS2015\PiRadioUtils\PiRadioUtils\bin\Debug\Controls.dll
+D:\VS2015\PiRadioUtils\PiRadioUtils\bin\Debug\Renci.SshNet.dll
+D:\VS2015\PiRadioUtils\PiRadioUtils\bin\Debug\Controls.pdb
+D:\VS2015\PiRadioUtils\PiRadioUtils\bin\Debug\Renci.SshNet.xml
