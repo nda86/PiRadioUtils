@@ -251,6 +251,8 @@ namespace PiRadioUtils
                         btnDisconnect.Enabled = true;
                         btnConnect.Enabled = false;
                         tabPlayer.Enabled = true;
+                        tabTabs.Enabled = true;
+                        
                         break;
                     case "disconnect":
                         lblConnectStatus.Text = "Disconnect!";
@@ -259,6 +261,7 @@ namespace PiRadioUtils
                         btnConnect.Enabled = true;
                         btnDisconnect.Enabled = false;
                         tabPlayer.Enabled = false;
+                        tabTabs.Enabled = false;
                         break;
                     default:
                         break;

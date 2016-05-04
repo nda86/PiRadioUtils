@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabCron = new System.Windows.Forms.TabControl();
+            this.tabTabs = new System.Windows.Forms.TabControl();
             this.tabPlayer = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblSongStatus = new System.Windows.Forms.Label();
@@ -50,11 +50,17 @@
             this.btnMute = new System.Windows.Forms.Button();
             this.btnVolumePlus = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnUpdateCron = new System.Windows.Forms.Button();
             this.txtOutCronJobs = new System.Windows.Forms.RichTextBox();
             this.btnGetCronJob = new System.Windows.Forms.Button();
             this.tabServices = new System.Windows.Forms.TabPage();
             this.btnGetServices = new System.Windows.Forms.Button();
             this.tableServices = new System.Windows.Forms.DataGridView();
+            this.colNumberPP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colServiceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colServiceStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colServiceStart = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colServiceStop = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtHost = new System.Windows.Forms.ComboBox();
             this.lblFlagConnect = new System.Windows.Forms.Label();
@@ -62,13 +68,7 @@
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.btnConnectSettingsOpen = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
-            this.colNumberPP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colServiceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colServiceStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colServiceStart = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colServiceStop = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnUpdateCron = new System.Windows.Forms.Button();
-            this.tabCron.SuspendLayout();
+            this.tabTabs.SuspendLayout();
             this.tabPlayer.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trcMPCVolume)).BeginInit();
@@ -80,20 +80,21 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabCron
+            // tabTabs
             // 
-            this.tabCron.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabCron.Controls.Add(this.tabPlayer);
-            this.tabCron.Controls.Add(this.tabPage1);
-            this.tabCron.Controls.Add(this.tabServices);
-            this.tabCron.Location = new System.Drawing.Point(0, 48);
-            this.tabCron.Name = "tabCron";
-            this.tabCron.SelectedIndex = 0;
-            this.tabCron.Size = new System.Drawing.Size(778, 295);
-            this.tabCron.TabIndex = 0;
-            this.tabCron.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabTabs.Controls.Add(this.tabPlayer);
+            this.tabTabs.Controls.Add(this.tabPage1);
+            this.tabTabs.Controls.Add(this.tabServices);
+            this.tabTabs.Enabled = false;
+            this.tabTabs.Location = new System.Drawing.Point(0, 48);
+            this.tabTabs.Name = "tabTabs";
+            this.tabTabs.SelectedIndex = 0;
+            this.tabTabs.Size = new System.Drawing.Size(778, 295);
+            this.tabTabs.TabIndex = 0;
+            this.tabTabs.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPlayer
             // 
@@ -320,6 +321,15 @@
             this.tabPage1.Text = "Cron";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnUpdateCron
+            // 
+            this.btnUpdateCron.Location = new System.Drawing.Point(199, 198);
+            this.btnUpdateCron.Name = "btnUpdateCron";
+            this.btnUpdateCron.Size = new System.Drawing.Size(121, 23);
+            this.btnUpdateCron.TabIndex = 2;
+            this.btnUpdateCron.Text = "Update Cron";
+            this.btnUpdateCron.UseVisualStyleBackColor = true;
+            // 
             // txtOutCronJobs
             // 
             this.txtOutCronJobs.Location = new System.Drawing.Point(8, 3);
@@ -374,6 +384,43 @@
             this.tableServices.Name = "tableServices";
             this.tableServices.Size = new System.Drawing.Size(770, 165);
             this.tableServices.TabIndex = 0;
+            // 
+            // colNumberPP
+            // 
+            this.colNumberPP.Frozen = true;
+            this.colNumberPP.HeaderText = "№";
+            this.colNumberPP.Name = "colNumberPP";
+            this.colNumberPP.ReadOnly = true;
+            this.colNumberPP.Width = 30;
+            // 
+            // colServiceName
+            // 
+            this.colServiceName.Frozen = true;
+            this.colServiceName.HeaderText = "Service";
+            this.colServiceName.Name = "colServiceName";
+            this.colServiceName.ReadOnly = true;
+            this.colServiceName.Width = 200;
+            // 
+            // colServiceStatus
+            // 
+            this.colServiceStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colServiceStatus.HeaderText = "Status";
+            this.colServiceStatus.Name = "colServiceStatus";
+            this.colServiceStatus.ReadOnly = true;
+            // 
+            // colServiceStart
+            // 
+            this.colServiceStart.HeaderText = "start";
+            this.colServiceStart.Name = "colServiceStart";
+            this.colServiceStart.ReadOnly = true;
+            this.colServiceStart.Width = 50;
+            // 
+            // colServiceStop
+            // 
+            this.colServiceStop.HeaderText = "stop";
+            this.colServiceStop.Name = "colServiceStop";
+            this.colServiceStop.ReadOnly = true;
+            this.colServiceStop.Width = 50;
             // 
             // groupBox2
             // 
@@ -445,64 +492,18 @@
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
             // 
-            // colNumberPP
-            // 
-            this.colNumberPP.Frozen = true;
-            this.colNumberPP.HeaderText = "№";
-            this.colNumberPP.Name = "colNumberPP";
-            this.colNumberPP.ReadOnly = true;
-            this.colNumberPP.Width = 30;
-            // 
-            // colServiceName
-            // 
-            this.colServiceName.Frozen = true;
-            this.colServiceName.HeaderText = "Service";
-            this.colServiceName.Name = "colServiceName";
-            this.colServiceName.ReadOnly = true;
-            this.colServiceName.Width = 200;
-            // 
-            // colServiceStatus
-            // 
-            this.colServiceStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colServiceStatus.HeaderText = "Status";
-            this.colServiceStatus.Name = "colServiceStatus";
-            this.colServiceStatus.ReadOnly = true;
-            // 
-            // colServiceStart
-            // 
-            this.colServiceStart.HeaderText = "start";
-            this.colServiceStart.Name = "colServiceStart";
-            this.colServiceStart.ReadOnly = true;
-            this.colServiceStart.Width = 50;
-            // 
-            // colServiceStop
-            // 
-            this.colServiceStop.HeaderText = "stop";
-            this.colServiceStop.Name = "colServiceStop";
-            this.colServiceStop.ReadOnly = true;
-            this.colServiceStop.Width = 50;
-            // 
-            // btnUpdateCron
-            // 
-            this.btnUpdateCron.Location = new System.Drawing.Point(199, 198);
-            this.btnUpdateCron.Name = "btnUpdateCron";
-            this.btnUpdateCron.Size = new System.Drawing.Size(121, 23);
-            this.btnUpdateCron.TabIndex = 2;
-            this.btnUpdateCron.Text = "Update Cron";
-            this.btnUpdateCron.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 346);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.tabCron);
+            this.Controls.Add(this.tabTabs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Radio Control";
-            this.tabCron.ResumeLayout(false);
+            this.tabTabs.ResumeLayout(false);
             this.tabPlayer.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trcMPCVolume)).EndInit();
@@ -519,7 +520,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabCron;
+        private System.Windows.Forms.TabControl tabTabs;
         private System.Windows.Forms.TabPage tabPlayer;
         private System.Windows.Forms.Button btnDisconnect;
         private System.Windows.Forms.Button btnConnect;

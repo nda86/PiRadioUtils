@@ -37,7 +37,6 @@ namespace Controls
 
         public string updateCronJob(string cronJobList)
         {
-            string[] result;
             using (var cmd = sshClient.CreateCommand
 ("echo " + "'" + cronJobList + "'" + " > cron_tmp; crontab cron_tmp pi; rm -f cron_tmp"))
             {
